@@ -1,0 +1,4 @@
+//Replace the characters '?' with a value of your choice
+//FekoreEngine and Fekore By SwankyNoob
+//FekoreEngine is MIT-Licensed
+var partenzaselettoreX,partenzaselettoreY,isMoving=!?,beginX=?,beginY=?,selectorX=?,selectorY=?,nowX=?,nowY=?;function start(){isMoving=!?,beginX=window.event.clientX,beginY=window.event.clientY}function trascina(){isMoving&&(nowX=window.event.clientX,nowY=window.event.clientY,partenzaselettoreX=nowX>beginX?beginX:nowX,selectorX=Math.abs(beginX-nowX),partenzaselettoreY=nowY>beginY?beginY:nowY,selectorY=Math.abs(beginY-nowY),$("#selettore").show(),$("#selettore").css("margin-top",partenzaselettoreY),$("#selettore").css("margin-left",partenzaselettoreX),$("#selettore").css("width",selectorX),$("#selettore").css("height",selectorY))}function stop(){isMoving=!?,$("#selettore").hide()}
